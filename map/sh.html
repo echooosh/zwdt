@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>中华人民共和国上海海关-政务地图</title>
+		<link rel="stylesheet" type="text/css" href="resource/sh/skin.css">
+		<link rel="stylesheet" type="text/css" href="resource/sh/tmp/skin.css">
+		<script type="text/javascript" src="layui/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/main.css">
+		<script type="text/javascript" src="js/fun.js"></script>
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+	</head>
+
+	<body>
+		<div class="customs-head">
+			<div class="pubCon">
+				<div class="customs-head-top">
+					<div class="customs-head-time fl">
+						<script type="text/javascript">
+						</script>2022年12月8日 星期四
+					</div>
+					<ul class="customs-head-link fr">
+						<li role="region" aria-label="海关电邮"><a target="_blank"
+								href="http://mail.customs.gov.cn/">海关电邮</a></li>.
+						<li role="region" aria-label="用户空间"><a onclick="userLoginNew()">用户空间</a></li>.
+						<li role="region" aria-label="无障碍"><a href="/Assistants/index.html">无障碍</a></li>.
+						<!-- <li><a target="_blank" href="/nanjing_customs/589345/589376/index.html"><img src="/shanghai_customs/template/common/header_2020/wb_icon.png?timestamp=1602832387920" ></a></li>. -->
+						<li role="region" aria-label="二维码"><a target="_blank"
+								href="/shanghai_customs/sy2020/745465/index.html"><img
+									src="resource/sh/tmp/wx_icon.png"></a></li>.
+						<li role="region" aria-label="繁体版"><a onclick="StranBody();return false;" class="cutA"
+								name="StranLink" id="StranLink" title="點擊以繁體中文方式瀏覽">繁體版</a>
+						</li>.
+						<li role="region" aria-label="English"><a target="_blank"
+								href="http://english.customs.gov.cn/">English</a></li>
+					</ul>
+				</div>
+				<div class="customs-head-center">
+					<div class="customs-head-logo fl"><a target="_blank" href="/shanghai_customs/sy2020/index.html"><img
+								src="resource/sh/tmp/logo.png" alt=""></a></div>
+					<div class="customs-head-search fr" role="search" aria-label="搜索区域">
+						<form action="http://search.customs.gov.cn/search/pcRender" id="customs-search" target="_blank">
+							<input type="hidden" name="pageId" id="pageId" value="f5261418ddc74f03b27e3590c531102b">
+							<input id="searchBoxAppName" type="hidden" name="appName" value="">
+							<input type="hidden" name="sr" id="sr" value="score desc">
+							<input type="hidden" name="ext" id="ext" value="siteId:423373">
+							<input type="text" name="q" id="q" autocomplete="off" placeholder="请输入搜索关键字" role="search"
+								aria-label="搜索区">
+							<button></button>
+						</form>
+						<div class="customs-head-search-tips" role="search" aria-label="搜索热词">
+							热词：<a onclick="goto('减免税')">减免税</a> | <a onclick="goto('海关管理')">海关管理</a> | <a
+								onclick="goto('货运监管')">货运监管</a> | <a onclick="goto('行政监管')">行政监管</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 导航 -->
+			<div class="customs-head-bottom">
+				<div class="pubCon " id="customs-nav">
+					<ul class="customs-head-nav  fr" role="navigation" aria-label="导航">
+						<li class="  on ">
+							<a target="_blank" href="/shanghai_customs/sy2020/index.html">首页</a>
+						</li> <span>|</span>
+						<li class=" ">
+							<a target="_blank" href="/shanghai_customs/423428/423443/index.html">机构概况</a>
+							<ul class="customs-sub-nav">
+								<li><a target="_blank" href="/shanghai_customs/423428/423443/index.html">领导简介</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423428/423435/index.html">本关概况</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423428/423439/nsjg/index.html">机构设置</a>
+								</li>
+								<li><a target="_blank" href="/shanghai_customs/423428/423429/index.html">历史沿革</a></li>
+							</ul>
+						</li> <span>|</span>
+						<li class=" ">
+							<a target="_blank" href="/shanghai_customs/423446/423447/index.html">新闻动态</a>
+							<ul class="customs-sub-nav">
+								<li><a target="_blank" href="/shanghai_customs/423446/423447/index.html">本关动态</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423446/423448/index.html">图片新闻</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423446/hgyx/index.html">沪关影像</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423446/423449/index.html">专题聚焦</a></li>
+							</ul>
+						</li> <span>|</span>
+						<li class=" ">
+							<a target="_blank" href="/shanghai_customs/423405/423419/index.html">政府信息公开</a>
+							<ul class="customs-sub-nav">
+								<li><a target="_blank" href="/shanghai_customs/423405/423419/index.html">政府信息公开指南</a>
+								</li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423405/zfxxgkzd14/index.html">政府信息公开制度</a></li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423405/fdzdgknr8/423452/423453/index.html">法定主动公开内容</a>
+								</li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423405/423484/3613833/index.html">政府信息公开年报</a></li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423405/zfxxgkml4748/index.html">政府信息公开目录</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423405/423420/index.html">依申请公开</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423405/3688660/index.html">政务公开工作要点</a>
+								</li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423405/qtzhxx1/423461/423462/index.html">其他综合信息</a></li>
+							</ul>
+						</li> <span>|</span>
+						<li class=" ">
+							<a target="_blank" href="http://online.customs.gov.cn/">互联网+海关</a>
+						</li> <span>|</span>
+						<li class=" ">
+							<a target="_blank" href="/eportal/ui?pageId=423570">互动交流</a>
+							<ul class="customs-sub-nav">
+								<li><a target="_blank" href="/shanghai_customs/423570/wlhd/423573/index.html">网络互动</a>
+								</li>
+								<li><a target="_blank" href="/shanghai_customs/423570/ywzx96/index.html">业务咨询</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423570/rmlx88/gzxx/index.html">人民来信</a>
+								</li>
+								<li><a target="_blank" href="/shanghai_customs/423570/423582/index.html">咨询投诉</a></li>
+								<li><a target="_blank" href="/shanghai_customs/423570/wsdc/index.html">网上调查</a></li>
+								<li><a target="_blank"
+										href="/shanghai_customs/423570/3613856/index.html">中欧陆海快线沿线国家通关协调咨询点</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="customs-body">
+			<div class="customs-body-bg">
+				<p class="position">当前位置：<span><a class="SkinObject" href="/shanghai_customs/sy2020/index.html"
+							target="_parent">首页</a>&nbsp;&gt;&nbsp;政务地图</span></p>
+				<div id="zhezhao" class="zhezhao"></div>
+				<div class="slideCom"><img class="pc" src="resource/sh/logo_pc.png" /><i
+						class="layui-icon layui-icon-left" style="padding-left: 8px;"></i></div>
+				<iframe src="shanghai.html" frameborder="0" id="frameMap"></iframe>
+			</div>
+		</div>
+		<div class="customs-foot">
+			<div class="customs-foot-link pubCon" role="region" aria-label="相关链接">
+				<span>相关链接</span>
+				<select name="">
+					<option value="">中国政府网</option>
+					<option value="http://www.gov.cn">中国政府网</option>
+					<option value="http://zygjjg.12388.gov.cn">中央国家机关举报网站</option>
+					<option value="http://www.locpg.gov.cn">中央人民政府驻香港特别行政区联络办公室</option>
+				</select>
+				<select name="">
+					<option value="">国务院部门</option>
+					<option value="http://www.fmprc.gov.cn/web/">外交部</option>
+					<option value="http://www.mod.gov.cn/">国防部</option>
+					<option value="http://www.ndrc.gov.cn/">国家发展和改革委员会</option>
+					<option value="http://www.moe.gov.cn/">教育部</option>
+					<option value="http://www.most.gov.cn/">科学技术部</option>
+					<option value="http://www.miit.gov.cn/">工业和信息化部</option>
+					<option value="http://www.seac.gov.cn/">国家民族事务委员会</option>
+					<option value="http://www.mps.gov.cn/">公安部</option>
+					<option value="" disabled="disabled">国家安全部</option>
+					<option value="http://www.mca.gov.cn/">民政部</option>
+					<option value="http://www.moj.gov.cn/">司法部</option>
+					<option value="http://www.mof.gov.cn/index.htm">财政部</option>
+					<option value="http://www.mohrss.gov.cn/">人力资源和社会保障部</option>
+					<option value="http://www.mnr.gov.cn/">自然资源部</option>
+					<option value="http://www.mee.gov.cn/">生态环境部</option>
+					<option value="http://www.mohurd.gov.cn/">住房和城乡建设部</option>
+					<option value="http://www.mot.gov.cn/">交通运输部</option>
+					<option value="http://www.mwr.gov.cn/">水利部</option>
+					<option value="http://www.moa.gov.cn/">农业农村部</option>
+					<option value="http://www.mofcom.gov.cn/">商务部</option>
+					<option value="http://www.mct.gov.cn/">文化和旅游部</option>
+					<option value="http://www.nhc.gov.cn/">国家卫生健康委员会</option>
+					<option value="http://www.mva.gov.cn/">退役军人事务部</option>
+					<option value="http://www.mem.gov.cn">应急管理部</option>
+					<option value="http://www.pbc.gov.cn/">人民银行</option>
+					<option value="http://www.audit.gov.cn/">审计署</option>
+					<option value="http://www.moe.gov.cn/jyb_sy/China_Language/">国家语言文字工作委员会</option>
+					<option value="" disabled="disabled">国家外国专家局</option>
+					<option value="http://www.cnsa.gov.cn/">国家航天局</option>
+					<option value="http://www.caea.gov.cn/">国家原子能机构</option>
+					<option value="" disabled="disabled">国家海洋局</option>
+					<option value="http://nnsa.mee.gov.cn/">国家核安全局</option>
+					<option value="http://www.sasac.gov.cn/">国务院国有资产监督管理委员会</option>
+					<option value="http://www.customs.gov.cn/">海关总署</option>
+					<option value="http://www.chinatax.gov.cn/">国家税务总局</option>
+					<option value="http://www.samr.gov.cn/">国家市场监督管理总局</option>
+					<option value="http://www.nrta.gov.cn/">国家广播电视总局</option>
+					<option value="http://www.sport.gov.cn/">国家体育总局</option>
+					<option value="http://www.stats.gov.cn/">国家统计局</option>
+					<option value="http://www.cidca.gov.cn/">国家国际发展合作署</option>
+					<option value="http://www.nhsa.gov.cn/">国家医疗保障局</option>
+					<option value="http://www.counsellor.gov.cn/">国务院参事室</option>
+					<option value="http://www.ggj.gov.cn/">国家机关事务管理局</option>
+					<option value="http://www.cnca.gov.cn/">国家认证认可监督管理委员会</option>
+					<option value="http://www.sac.gov.cn/">国家标准化管理委员会</option>
+					<option value="http://www.ncac.gov.cn/">国家新闻出版署（国家版权局）</option>
+					<option value="" disabled="disabled">国家宗教事务局</option>
+					<option value="http://www.hmo.gov.cn/">国务院港澳事务办公室</option>
+					<option value="http://www.gov.cn/guoqing/2018-06/22/content_5300522.htm">国务院研究室</option>
+					<option value="http://www.gqb.gov.cn/">国务院侨务办公室</option>
+					<option value="http://www.gwytb.gov.cn/">国务院台湾事务办公室</option>
+					<option value="http://www.cac.gov.cn/">国家互联网信息办公室</option>
+					<option value="http://www.scio.gov.cn/index.htm">国务院新闻办公室</option>
+					<option value="http://203.192.6.89/xhs/">新华通讯社</option>
+					<option value="http://www.cas.ac.cn/">中国科学院</option>
+					<option value="http://cass.cssn.cn/">中国社会科学院</option>
+					<option value="http://www.cae.cn/">中国工程院</option>
+					<option value="http://www.drc.gov.cn/">国务院发展研究中心</option>
+					<option value="" disabled="disabled">中央广播电视总台</option>
+					<option value="http://www.cma.gov.cn/">中国气象局</option>
+					<option value="http://www.cbirc.gov.cn">中国银行保险监督管理委员会</option>
+					<option value="http://www.csrc.gov.cn/pub/newsite/">中国证券监督管理委员会</option>
+					<option value="http://www.ccps.gov.cn/">国家行政学院</option>
+					<option value="http://www.gjxfj.gov.cn/">国家信访局</option>
+					<option value="http://www.lswz.gov.cn/">国家粮食和物资储备局</option>
+					<option value="http://www.nea.gov.cn/">国家能源局</option>
+					<option value="http://www.sastind.gov.cn/">国家国防科技工业局</option>
+					<option value="http://www.tobacco.gov.cn/html/">国家烟草专卖局</option>
+					<option value="http://www.mps.gov.cn/n2254996/">国家移民管理局</option>
+					<option value="http://www.forestry.gov.cn/">国家林业和草原局</option>
+					<option value="http://www.nra.gov.cn/">国家铁路局</option>
+					<option value="http://www.caac.gov.cn/index.html">中国民用航空局</option>
+					<option value="http://www.spb.gov.cn/">国家邮政局</option>
+					<option value="http://www.ncha.gov.cn/">国家文物局</option>
+					<option value="http://www.satcm.gov.cn/">国家中医药管理局</option>
+					<option value="http://www.chinamine-safety.gov.cn/">国家矿山安全监察局</option>
+					<option value="http://www.safe.gov.cn/">国家外汇管理局</option>
+					<option value="http://www.nmpa.gov.cn/WS04/CL2042/">国家药品监督管理局</option>
+					<option value="http://www.cnipa.gov.cn">国家知识产权局</option>
+					<option value="" disabled="disabled">出入境管理局</option>
+					<option value="http://www.forestry.gov.cn/">国家公园管理局</option>
+					<option value="http://www.scs.gov.cn/">国家公务员局</option>
+					<option value="http://www.saac.gov.cn/">国家档案局</option>
+					<option value="http://www.gjbmj.gov.cn">国家保密局</option>
+					<option value="http://www.oscca.gov.cn/">国家密码管理局</option>
+				</select>
+				<select name="">
+					<option value="">地方政府</option>
+					<option value="http://www.beijing.gov.cn">北京市</option>
+					<option value="http://www.shanghai.gov.cn">上海市</option>
+					<option value="http://www.tj.gov.cn">天津市</option>
+					<option value="http://www.cq.gov.cn">重庆市</option>
+					<option value="http://www.hlj.gov.cn">黑龙江</option>
+					<option value="http://www.jl.gov.cn">吉林省</option>
+					<option value="http://www.ln.gov.cn">辽宁省</option>
+					<option value="http://www.hebei.gov.cn">河北省</option>
+					<option value="http://www.shanxi.gov.cn">山西省</option>
+					<option value="http://www.jiangsu.gov.cn">江苏省</option>
+					<option value="http://www.zj.gov.cn">浙江省</option>
+					<option value="http://www.ah.gov.cn">安徽省</option>
+					<option value="http://www.fujian.gov.cn">福建省</option>
+					<option value="http://www.jiangxi.gov.cn">江西省</option>
+					<option value="http://www.sd.gov.cn">山东省</option>
+					<option value="http://www.henan.gov.cn">河南省</option>
+					<option value="http://www.hubei.gov.cn">湖北省</option>
+					<option value="http://www.hunan.gov.cn">湖南省</option>
+					<option value="http://www.gd.gov.cn">广东省</option>
+					<option value="http://www.hainan.gov.cn">海南省</option>
+					<option value="http://www.sc.gov.cn/">四川省</option>
+					<option value="http://www.guizhou.gov.cn">贵州省</option>
+					<option value="http://www.yn.gov.cn">云南省</option>
+					<option value="http://www.shaanxi.gov.cn">陕西省</option>
+					<option value="http://www.gansu.gov.cn">甘肃省</option>
+					<option value="http://www.qinghai.gov.cn/">青海省</option>
+					<option value="http://www.nmg.gov.cn">内蒙古</option>
+					<option value="http://www.nx.gov.cn/">宁 夏</option>
+					<option value="http://www.xj.gov.cn/">新 疆</option>
+					<option value="http://www.gxi.gov.cn">广 西</option>
+					<option value="http://www.xizang.gov.cn/">西 藏</option>
+					<option value="http://www.gov.hk/">香 港</option>
+					<option value="http://www.gov.mo/">澳 门</option>
+				</select>
+				<select name="">
+					<option value="">分署和司局子站</option>
+					<!--<option value="http://bgtkab.customs.gov.cn">办公厅（国家口岸管理办公室）</option>-->
+					<option value="http://gdfs.customs.gov.cn">广东分署</option>
+					<option value="http://bgt.customs.gov.cn">办公厅</option>
+					<option value="http://gkb.customs.gov.cn">国家口岸管理办公室</option>
+					<option value="http://zfs.customs.gov.cn">政策法规司</option>
+					<option value="http://zhs.customs.gov.cn">综合业务司</option>
+					<option value="http://zms.customs.gov.cn">自贸区和特殊区域发展司</option>
+					<option value="http://fxs.customs.gov.cn">风险管理司</option>
+					<option value="http://gszgs.customs.gov.cn">关税征管司</option>
+					<option value="http://wss.customs.gov.cn">卫生检疫司</option>
+					<option value="http://dzs.customs.gov.cn">动植物检疫司</option>
+					<option value="http://jckspj.customs.gov.cn">进出口食品安全局</option>
+					<option value="http://sjs.customs.gov.cn">商品检验司</option>
+					<option value="http://jgs.customs.gov.cn">口岸监管司</option>
+					<option value="http://tjs.customs.gov.cn">统计分析司</option>
+					<option value="http://qgjcs.customs.gov.cn">企业管理和稽查司</option>
+					<option value="http://jsj.customs.gov.cn">缉私局</option>
+					<option value="http://gjs.customs.gov.cn">国际合作司</option>
+					<option value="http://cws.customs.gov.cn">财务司</option>
+					<option value="http://kjs.customs.gov.cn">科技发展司</option>
+					<option value="http://dss.customs.gov.cn">督察内审司</option>
+					<option value="http://rjs.customs.gov.cn">人事教育司</option>
+					<option value="http://jgdw.customs.gov.cn">机关党委</option>
+					<option value="http://ltj.customs.gov.cn">离退休干部局</option>
+				</select>
+				<select name="">
+					<option value="">直属海关</option>
+					<option value="http://beijing.customs.gov.cn">北京海关</option>
+					<option value="http://tianjin.customs.gov.cn">天津海关</option>
+					<option value="http://shijiazhuang.customs.gov.cn">石家庄海关</option>
+					<option value="http://taiyuan.customs.gov.cn">太原海关</option>
+					<option value="http://huhehaote.customs.gov.cn">呼和浩特海关</option>
+					<option value="http://manzhouli.customs.gov.cn">满洲里海关</option>
+					<option value="http://dalian.customs.gov.cn">大连海关</option>
+					<option value="http://shenyang.customs.gov.cn">沈阳海关</option>
+					<option value="http://changchun.customs.gov.cn">长春海关</option>
+					<option value="http://harbin.customs.gov.cn ">哈尔滨海关</option>
+					<option value="http://shanghai.customs.gov.cn">上海海关</option>
+					<option value="http://nanjing.customs.gov.cn">南京海关</option>
+					<option value="http://hangzhou.customs.gov.cn">杭州海关</option>
+					<option value="http://ningbo.customs.gov.cn">宁波海关</option>
+					<option value="http://hefei.customs.gov.cn">合肥海关</option>
+					<option value="http://fuzhou.customs.gov.cn">福州海关</option>
+					<option value="http://xiamen.customs.gov.cn">厦门海关</option>
+					<option value="http://nanchang.customs.gov.cn">南昌海关</option>
+					<option value="http://qingdao.customs.gov.cn">青岛海关</option>
+					<option value="http://jinan.customs.gov.cn">济南海关</option>
+					<option value="http://zhengzhou.customs.gov.cn">郑州海关</option>
+					<option value="http://wuhan.customs.gov.cn">武汉海关</option>
+					<option value="http://changsha.customs.gov.cn">长沙海关</option>
+					<option value="http://guangzhou.customs.gov.cn">广州海关</option>
+					<option value="http://shenzhen.customs.gov.cn">深圳海关</option>
+					<option value="http://gongbei.customs.gov.cn">拱北海关</option>
+					<option value="http://shantou.customs.gov.cn">汕头海关</option>
+					<option value="http://huangpu.customs.gov.cn">黄埔海关</option>
+					<option value="http://jiangmen.customs.gov.cn">江门海关</option>
+					<option value="http://zhanjiang.customs.gov.cn">湛江海关</option>
+					<option value="http://nanning.customs.gov.cn">南宁海关</option>
+					<option value="http://haikou.customs.gov.cn">海口海关</option>
+					<option value="http://chongqing.customs.gov.cn">重庆海关</option>
+					<option value="http://chengdu.customs.gov.cn">成都海关</option>
+					<option value="http://guiyang.customs.gov.cn">贵阳海关</option>
+					<option value="http://kunming.customs.gov.cn">昆明海关</option>
+					<option value="http://lasa.customs.gov.cn">拉萨海关</option>
+					<option value="http://xian.customs.gov.cn">西安海关</option>
+					<option value="http://lanzhou.customs.gov.cn">兰州海关</option>
+					<option value="http://xining.customs.gov.cn">西宁海关</option>
+					<option value="http://yinchuan.customs.gov.cn">银川海关</option>
+					<option value="http://urumqi.customs.gov.cn">乌鲁木齐海关</option>
+				</select>
+				<select name="">
+					<option value="">在京直属事业单位</option>
+					<option value="http://www.hgcbs.com.cn/">海关出版社</option>
+					<option value="http://www.customsmuseum.cn">中国海关博物馆</option>
+					<option value="http://www.chinaport.gov.cn">电子口岸数据中心</option>
+				</select>
+				<select name="">
+					<option value="">世界海关组织</option>
+					<option value="http://www.wcoomd.org">世界海关组织</option>
+				</select>
+				<select name="">
+					<option value="">社会团体</option>
+					<option value="http://www.caop.org.cn">口岸协会</option>
+					<option value="http://chinacba.org/ccba/">报关协会</option>
+					<option value="http://www.cfea.org.cn">保税区出口加工区协会</option>
+				</select>
+			</div>
+			<div class="customs-foot-text pubCon" role="region" aria-label="网站信息">
+				<div class="foot-text-left fl">
+					<p><a href="/shanghai_customs/sy2020/745458/index.html">关于我们　|　</a><a href="javascript:void(0);"
+							onclick="SetHome(this,'http://shanghai.customs.gov.cn');" title="设为首页">设为首页　|　</a><a
+							href="javascript:void(0);"
+							onclick="AddFavorite('中华人民共和国上海海关','http://shanghai.customs.gov.cn')"
+							title="加入收藏">加入收藏　|　</a><a href="/shanghai_customs/sy2020/742852/index.html">举报电话　|　</a><a
+							href="/shanghai_customs/sy2020/742858/index.html">使用帮助</a><a href="/Assistants/index.html"
+							class="phone_wza">　|　无障碍　</a></p>
+					<p>版权所有：中华人民共和国上海海关　　主办单位:中华人民共和国上海海关</p>
+					<p>电话:021-68890000　地址:上海市中山东一路13号　邮编:200002 </p>
+				</div>
+				<div class="foot-text-center fl">
+					<p><a href="http://beian.miit.gov.cn/" target="blank">京ICP备17015317号</a></p>
+					<p>京公网安备：<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11040102700078"
+							target="blank">11040102700078</a></p>
+					<p>网站标识码：bm28120001</p>
+				</div>
+				<div class="foot-text-right fr">
+				</div>
+			</div>
+		</div>
+		<div id="hint" style="display: none;position: fixed;z-index: 999;">点击进入政务地图</div>
+	</body>
+
+</html>
+<script type="text/javascript">
+	var index = layer.load(1, {
+		shade: [0.9, '#fff']
+	});
+	var one = true;
+	$(function() {
+		var tip1;
+		$(".zhezhao").click(function() {
+			$("html,body").animate({
+				scrollTop: $(".customs-body-bg").offset().top
+			}, 500);
+
+			$(".zhezhao").hide();
+			$(".position").hide();
+			$("#hint").hide();
+			//if (!isMobile() && $('.customs-body-bg').width()>800) {
+			setTimeout(function() {
+				$(".customs-head").hide();
+				$(".customs-foot").slideUp();
+				$("html,body").attr("scrollTop", "0");
+				$(".slideCom").slideDown();
+			}, 500);
+			$(".customs-body-bg").animate({
+				width: "100vw",
+				height: "100vh"
+			}, 1000);
+			setTimeout(function() {
+				if (one) {
+					one = false;
+					iframe.contentWindow.showInputAddress(false);
+				}
+				$(".slideCom").animate({
+					width: "2.2rem !important"
+				}, 100);
+				tip1 = setTimeout(function() {
+					layer.tips('您可以点击这里恢复页面预览', ".slideCom", {
+						tips: [4, 'rgb(238, 93, 91)'],
+						time: 3000
+					});
+				}, 3000);
+			}, 1500);
+			//}
+		});
+		$(".slideCom").click(function(event) {
+			clearTimeout(tip1);
+			$(".zhezhao").show();
+			$(".slideCom").hide();
+			$(".position").show();
+			$("#hint").show();
+			var h = "900px";
+			if (isMobile()) {
+				h = "640px";
+			}
+			$(".customs-body-bg").css("margin", "0 auto").animate({
+				width: "1200px",
+				height: h
+			}, 1000);
+
+
+			$(".customs-head").slideDown();
+			$(".customs-foot").slideDown();
+			setTimeout(function() {
+				$("html,body").attr("scrollTop", "0");
+			}, 1000);
+		});
+		
+		var iframe = document.getElementById("frameMap");
+		if (iframe.attachEvent) {
+			iframe.attachEvent('onload', function() {
+				layer.close(index);
+			});
+		} else {
+			iframe.onload = function() {
+				layer.close(index);
+			};
+		}
+
+		document.getElementById("zhezhao").addEventListener("mousemove", function(e) {
+			var myhint = $("#hint");
+			$(myhint).css({
+				"left": e.clientX + 8 + "px",
+				"top": e.clientY + 2 + "px",
+				"display": "block"
+			});
+		});
+		document.getElementById("zhezhao").addEventListener("mouseout", function(e) {
+			var myhint = $("#hint");
+			$(myhint).css({
+				"display": "none"
+			});
+		});
+	})
+</script>

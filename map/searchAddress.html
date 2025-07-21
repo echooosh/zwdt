@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>政务地图-查询位置</title>
+		<script type="text/javascript" src="layui/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script src="//api.tianditu.gov.cn/api?v=4.0&tk=eaad78a2ea0c56f85c9ff4bbcd0c8489" type="text/javascript"></script>
+		<script type="text/javascript" src="js/com.js"></script>
+		<script type="text/javascript" src="js/fun.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="js/searchAddress.js"></script>
+		<style>
+			#searchResultPanel ul li:hover {background-color: #b1d3fd;color: #fff;}
+		</style>
+	</head>
+
+	<body>
+		<div style="width:95vw;padding: 0 3vw 0 2vw;">
+			<div id="setLocal">
+				<div id="r-result">您的位置：<lable id="address"></lable><a style="float: right;color: #0D4D8B;cursor: pointer;font-size: 1.2rem;"
+						onclick="setLocal()">保存</a><input type="text" id="suggestId" size="20" value="" placeholder="请输入地址"
+						style="width:94vw;line-height: 1.6em;margin: 3px;" /></div>
+				<div id="searchResultPanel" style="margin: 3px;border:1px solid #C0C0C0;height:auto; display:none;">
+				</div>
+			</div>
+			<div id="map-container" style="width: 95vw; height: 100vw;"></div>
+			<input type="hidden" id="location" name="location" />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+    <title>中华人民共和国北京海关-政务地图</title>
+    <!--[if lt IE 11]>
+      <script>
+        window.location.href = "resource/ie.html";
+      </script>
+    <![endif]-->
+    　　
+    <!--[if !IE]><!-->
+    <script>
+      if (/*@cc_on!@*/ false) {
+        window.location.href = "resource/ie.html";
+      }
+    </script>
+    <!--<![endif]-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes"
+    />
+    <script type="text/javascript" src="layui/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css" />
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="layui/css/main.css" />
+
+    <script
+      src="//api.tianditu.gov.cn/api?v=4.0&tk=eaad78a2ea0c56f85c9ff4bbcd0c8489"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript" src="js/com.js"></script>
+    <script type="text/javascript" src="js/fun.js"></script>
+    <script>
+      var siteKey = "700"; //当前站点索引
+    </script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script
+      type="text/javascript"
+      src="resource/template/default/location.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="resource/template/default/matter.js"
+    ></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/history.js"></script>
+  </head>
+
+  <body>
+    <div class="layui-row">
+      <div class="layui-col-xs4 layui-col-md3 map_left" id="map_left">
+        <div class="list_con">
+          <div class="layui-row searchBox">
+            <button class="layui-btn layui-btn-primary" id="chooseTpye">
+              <span>搜地点</span>
+              <i class="layui-icon layui-icon-down layui-font-12"></i>
+            </button>
+            <form class="layui-form" action="">
+              <input type="hidden" id="selectTpye" value="dating" />
+              <!-- <input type="text" placeholder="请输入搜索内容" class="layui-input"> -->
+
+              <div class="layui-input-block">
+                <i class="layui-icon iconfont">&#xeafe;</i>
+                <select
+                  id="searchText"
+                  name="modules"
+                  lay-verify="required"
+                  lay-search=""
+                  lay-filter="searchText"
+                ></select>
+              </div>
+
+              <!-- 
+							<button type="button" class="layui-btn">
+								<i class="layui-icon layui-icon-search"></i>
+							</button> -->
+            </form>
+          </div>
+          <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title" id="tab1">
+              <li class="layui-this" onclick="showList();">
+                <span class="iconfont">&#xe6b4;</span>选择地点
+              </li>
+              <li onclick="showList();">
+                <span class="iconfont">&#xec4e;</span>选择事项
+              </li>
+            </ul>
+            <div class="layui-tab-content" id="tabCon">
+              <!-- <div class="top">
+								<i class="layui-icon layui-icon-down" onclick="slideHeight();"></i>
+								<i class="layui-icon layui-icon-close" onclick="closeSlide();"></i>
+							</div> -->
+              <div id="setLocal">
+                <div id="r-result">
+                  您的位置:<a class="icon-map cursor" onclick="closeLocal()"
+                    >关闭</a
+                  ><input
+                    type="text"
+                    id="suggestId"
+                    size="20"
+                    value=""
+                    style="width: 100%"
+                  />
+                </div>
+                <div
+                  id="searchResultPanel"
+                  style="
+                    border: 1px solid #c0c0c0;
+                    width: 150px;
+                    height: auto;
+                    display: none;
+                  "
+                ></div>
+              </div>
+              <div class="layui-tab-item layui-show">
+                <div class="top">
+                  <span class="layui-icon-return iconfont" onclick="goBack();"
+                    >&#xe64e;</span
+                  >
+                  <span
+                    class="layui-icon-down iconfont"
+                    onclick="slideHeight();"
+                  ></span>
+                  <span
+                    class="layui-icon-close iconfont"
+                    onclick="closeSlide();"
+                    >&#xe725;</span
+                  >
+                </div>
+                <div class="layui-panel">
+                  <ul class="layui-menu" id="datingList"></ul>
+                </div>
+              </div>
+              <div class="layui-tab-item">
+                <div class="top">
+                  <span class="layui-icon-return iconfont" onclick="goBack();"
+                    >&#xe64e;</span
+                  >
+                  <span
+                    class="layui-icon-down iconfont"
+                    onclick="slideHeight();"
+                  ></span>
+                  <span
+                    class="layui-icon-close iconfont"
+                    onclick="closeSlide();"
+                    >&#xe725;</span
+                  >
+                </div>
+                <div class="layui-tab layui-tab-brief" id="ywTab">
+                  <ul class="layui-tab-title">
+                    <li class="layui-this">事项目录</li>
+                    <li>网办事项</li>
+                    <!-- <li>热点事项</li> -->
+                  </ul>
+                  <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                      <div class="layui-panel">
+                        <ul class="layui-menu" id="yewuList"></ul>
+                      </div>
+                    </div>
+                    <div
+                      class="layui-tab-item"
+                      id="onlineList"
+                      style="padding: 10px 0"
+                    ></div>
+                    <div
+                      class="layui-tab-item"
+                      id="hotList"
+                      style="padding: 10px 0"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="infoCon">
+          <div class="top">
+            <span class="layui-icon-return iconfont" onclick="goBack();"
+              >&#xe64e;</span
+            >
+            <span
+              class="layui-icon-down iconfont"
+              onclick="slideHeight();"
+            ></span>
+            <span class="layui-icon-close iconfont" onclick="closeInfo();"
+              >&#xe725;</span
+            >
+          </div>
+          <div class="con"></div>
+        </div>
+      </div>
+      <div class="layui-col-xs14 layui-col-md9">
+        <div id="map-container"></div>
+      </div>
+    </div>
+
+    <ul
+      onclick="changeMap(true,true)"
+      id="changeMap"
+      class="drawing-panel cursor"
+      style="z-index: 10000"
+    >
+      <div class="btn" title="切换站点" lay-event="LAYTABLE_TIPS">
+        <i class="layui-icon icon-center layui-icon-app"></i>
+      </div>
+    </ul>
+    <ul
+      onclick="showLocal()"
+      onmousedown="down()"
+      onmouseup="up()"
+      id="showLocal"
+      class="local-panel cursor"
+      style="z-index: 10000"
+    >
+      <div class="btn" title="我的位置" lay-event="LAYTABLE_TIPS">
+        <i class="layui-icon icon-center layui-icon-radio"></i>
+      </div>
+    </ul>
+
+    <input type="hidden" id="siteKey" />
+
+    <script src="/js/report.js"></script>
+  </body>
+</html>
+
+<script type="text/javascript">
+  layui.use("dropdown", function () {
+    var dropdown = layui.dropdown;
+    var form = layui.form;
+
+    dropdown.render({
+      elem: "#chooseTpye",
+      data: [
+        {
+          title: "搜地点",
+          id: "dating",
+        },
+        {
+          title: "搜事项",
+          id: "yewu",
+        },
+      ],
+      click: function (obj) {
+        $("#chooseTpye span").text(obj.title);
+        $("#selectTpye").val(obj.id);
+        //alert($("#selectTpye").val());
+        if ($("#selectTpye").val() == "dating") {
+          loadOrg();
+        } else {
+          loadWork();
+        }
+      },
+    });
+
+    //地点点击
+    dropdown.on("click(datingList)", function (options) {
+      var othis = $(this); //当前菜单列表的 DOM 对象
+
+      //console.log(othis); //菜单列表的 lay-options 中的参数
+      //alert(options.id);
+      showMarker(options.id);
+    });
+    //事项点击
+    dropdown.on("click(yewuList)", function (options) {
+      var othis = $(this); //当前菜单列表的 DOM 对象
+      //console.log(options); //菜单列表的 lay-options 中的参数
+      showYwInfo(options.id);
+    });
+  });
+  layui.use("form", function () {
+    var form = layui.form;
+    form.on("select(searchText)", function (data) {
+      //alert(data.value);
+      //var value= data.value;//得到选中的值
+      //var text = $(this)[0].innerText;//得到选中的文本内容
+      if ($("#selectTpye").val() == "dating") {
+        showMarker(data.value);
+      } else {
+        showYwInfo(data.value);
+      }
+    });
+  });
+
+  //搜机构
+  function loadOrg() {
+    layui.use("form", function () {
+      var form = layui.form;
+      $("#searchText option").remove();
+      // Option参数说明：Option("text","value")
+      $("#searchText").append(new Option("请输入搜索关键字", ""));
+      //console.log(datas);
+      // $.each(datas, function(i, item) {
+      // 	$("#searchText").append(new Option(item.tag.name, item.tag.id));
+      // });
+      // // 最关键需要重新渲染下拉框
+      // form.render('select')
+
+      $.ajax({
+        url: getAjaxUrl(searchOrgList, ""),
+        method: "get",
+        success: function (res) {
+          //console.log(searchOrgList);
+          //console.log(res);
+          if (res.success) {
+            $.each(res.result, function (i, item) {
+              //console.log(item.dataIndex)
+              //console.log(item.id)
+              $("#searchText").append(new Option(item.dataIndex, item.id));
+            });
+
+            // 最关键需要重新渲染下拉框
+            form.render("select");
+          } else {
+            layer.msg(res.message);
+          }
+        },
+        error: function () {
+          layer.msg("未搜索到结果");
+        },
+      });
+    });
+  }
+  //搜事项
+  function loadWork() {
+    layui.use("form", function () {
+      var form = layui.form;
+      $("#searchText option").remove();
+      // Option参数说明：Option("text","value")
+      $("#searchText").append(new Option("请输入搜索关键字", ""));
+      //console.log(works);
+      $.each(works, function (i, item) {
+        $("#searchText").append(new Option(item.name, item.id));
+      });
+      // 最关键需要重新渲染下拉框
+      form.render("select");
+      // $.ajax({
+      // 	url: getAjaxUrl(searchWorkList),
+      // 	method: "get",
+      // 	success: function(res) {
+      // 		//console.log(res);
+      // 		if (res.success) {
+      // 			$.each(res.result, function(i, item) {
+      // 				console.log(item.dataIndex)
+      // 				console.log(item.id)
+      // 				$("#searchText").append(new Option(item.dataIndex, item.id));
+      // 			});
+
+      // 			// 最关键需要重新渲染下拉框
+      // 			form.render('select')
+      // 		} else {
+      // 			layer.msg(res.message);
+      // 		}
+      // 	},
+      // 	error: function() {
+      // 		layer.msg("未搜索到结果");
+      // 	}
+      // })
+    });
+  }
+</script>

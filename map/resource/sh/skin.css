@@ -1,0 +1,82 @@
+
+/* 地图样式 */
+.customs-body{width: 100%;background: url(http://shanghai.customs.gov.cn//shanghai_customs/template/page/index_2020/customs_bg.png) no-repeat top center;background-size: auto;background-size: 100%}
+.customs-body-bg { width: 1200px;height: 900px; margin: 0 auto; position: relative; overflow: hidden; }
+#frameMap, .zhezhao { width: 100%; height: 100%; width: 100vw; height: 100vh; }
+#frameMap{  width: 100%;  }
+.zhezhao { background: none; position: absolute; top: 0; left: 0;cursor: pointer; }
+/* .zhezhao { background: none; position: absolute; top: 0; left: 0;background-color: #fff;filter: opacity(60%);cursor: pointer; } */
+/* .zhezhao { background:url(bg.png) no-repeat; position: absolute; top: 0; left: 0;cursor: pointer; } */
+.slideCom {width: 316px; height: 48px; line-height: 48px; font-size: 16px; color: #fff; background: #005a9f; position: absolute; top: 0; left: 50%; margin-left: -148px; padding: 0 10px; border-radius: 0 0 4px 4px; display: none; cursor: pointer; z-index: 10; }
+.slideCom img.pc{border: none;max-width: 300px;max-height: 48px;vertical-align: middle;object-fit: cover;margin: 10px;}
+.slideCom i {display: none;}
+p.position { font-size: 14px; line-height: 34px; height: 34px; padding-top: 8px; -border-bottom: 1px solid #e5e5e5; margin-bottom: 10px; color:#333; }
+p.position a { color:#333; }
+@media screen and (max-width:800px) {
+.customs-body-bg { width: 100% !important; height: 640px;}
+.slideCom{right: 0 !important; padding:0;top: 8rem!important;width: 2.2rem!important;height: 3rem!important;line-height: 3rem!important;border-radius: 2.2rem 0 0 2.2rem!important;left: auto;}
+.slideCom:hover {width: 2.2rem !important;border: solid #fff 1px;}
+.slideCom img.pc {display: none;}
+.slideCom i {
+	display: block;
+	-webkit-animation:fa-spin 2s  linear;
+	animation:fa-spin 2s  linear;
+	animation-iteration-count:3;
+	animation-delay:3s
+}
+ p.position { height: auto; line-height: 2em; }
+ .zhezhao { background:none; }
+ 
+ 
+ @-webkit-keyframes fa-spin{
+ 	0%{
+ 		-webkit-transform:rotate(0deg);
+ 		transform:rotate(0deg)
+ 	}
+ 
+ 	100%{
+ 		-webkit-transform:rotate(359deg);
+ 		transform:rotate(359deg)
+ 	}
+ 
+ }
+ 
+ @keyframes fa-spin{
+ 	0%{
+ 		-webkit-transform:rotate(0deg);
+ 		transform:rotate(0deg)
+ 	}
+ 
+ 	100%{
+ 		-webkit-transform:rotate(359deg);
+ 		transform:rotate(359deg)
+ 	}
+ 
+ }
+ 
+ .fa-rotate-90{
+ 	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+ 	-webkit-transform:rotate(90deg);
+ 	-ms-transform:rotate(90deg);
+ 	transform:rotate(90deg)
+ }
+ 
+ .fa-rotate-180{
+ 	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+ 	-webkit-transform:rotate(180deg);
+ 	-ms-transform:rotate(180deg);
+ 	transform:rotate(180deg)
+ }
+ 
+ .fa-rotate-270{
+ 	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+ 	-webkit-transform:rotate(270deg);
+ 	-ms-transform:rotate(270deg);
+ 	transform:rotate(270deg)
+ } 
+ 
+ 
+}
+
+
+

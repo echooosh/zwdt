@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<title>政务地图-事项信息纠错</title>
+		<script type="text/javascript" src="layui/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css">
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<link rel="stylesheet" type="text/css" href="layui/css/main.css">
+		<script src="//api.tianditu.gov.cn/api?v=4.0&tk=eaad78a2ea0c56f85c9ff4bbcd0c8489" type="text/javascript"></script>
+		<script type="text/javascript" src="js/com.js"></script>
+		<script type="text/javascript" src="js/fun.js"></script>
+		<script type="text/javascript" src="js/controller.js"></script>
+		<link href="resource/jiucuo/xiangqing.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/gVerify.js"></script>
+		<style>
+			.jcleft {
+			  width: 100%;
+			}
+		</style>
+	</head>
+
+	<body onload="onload();">
+		<form id="correctionForm" class="layui-form layui-form-pane" action="" lay-filter="example">
+			<div class="jcmain clearfix">
+				<div class="jcleft fl">
+					<div class="jctab">
+						<div class="layui-form-item">
+							<label class="layui-form-label">事项名称</label>
+							<div class="layui-input-block">
+								<input type="text" id="title" lay-verify="required"  name="title" readonly="readonly" autocomplete="off" 
+									class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">纠错内容:</label>
+							<div class="layui-input-block">
+								<textarea placeholder="请您描述要纠正的内容" lay-verify="required"  class="layui-textarea" name="newcontent" id="newcontent"></textarea>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">您的电话/邮箱</label>
+							<div class="layui-input-block">
+								<input type="text" id="contact"  name="contact" autocomplete="off"  placeholder="(选填)"
+									class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">验 证 码</label>
+							<div class="layui-input-inline code">
+								<input type="text" name="captcha" lay-verify="required" autocomplete="off" id="captcha"
+									class="layui-input">
+							</div>
+							<div class="layui-form-mid cursor" title="点击更换验证码" style="padding: 0!important;" id="rcode"
+								onclick="getNewCode()">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<button type="submit" class="layui-btn" lay-submit="" id="btnSubmit"
+									lay-filter="btnSubmit">立即提交</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<input type="hidden" name="content" id="content" value="">
+			<input type="hidden" name="adviseType" id="adviseType" value="item">
+			<input type="hidden" name="checkKey" id="checkKey">
+		</form>
+		<script type="text/javascript" src="resource/jiucuo/service.js"></script>
+		<script type="text/javascript" src="resource/jiucuo/rcode.js"></script>
+
+	</body>
+
+</html>
