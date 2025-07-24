@@ -21,6 +21,8 @@ var api = ["data", host + "/govmap-system/"];
 var filePath = ["data/", host + "/govmap-system/sys/common/static/"];
 //网点信息
 var getOrg = ["/location/{id}.json", "govmap/appHall/frontQueryById?id={id}"];
+// 公告信息
+var getNotice = ["/matter/hotList.json", "govmap/appRelatedNotice/list?id={id}"]
 //网点列表
 var getOrgList = ["/location/orgList.json", "govmap/appOrg/frontPageList?pid=1593069623254011905"];
 //网点查询列表
