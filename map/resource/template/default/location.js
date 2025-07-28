@@ -146,13 +146,24 @@ function setDetiles(item, id) {
         notice.title +
         "</h4>" +
         '<span style="color: #888; font-size: 12px; white-space: nowrap; margin-left: 10px;">' +
-        (notice.publishDate || "") +
+        (notice.materialFile
+          ? '<a target="_bank" href ="' +
+            getFileUrl(notice.materialFile) +
+            '"> <i class="iconfont">&#xe7bd;</i></a>'
+          : "") +
         "</span>" +
         "</div>" +
         (notice.summary
           ? '<span style="color: #333; font-size: 13px; margin: 4px 0;white-space: pre-line;">' +
             splitText(notice.summary, 60) +
             "</span>"
+          : "") +
+        (notice.materialFile
+          ? '<a target="_bank" href ="' +
+            getFileUrl(notice.materialFile) +
+            '">' +
+            notice.materialFile +
+            ' <i class="iconfont">&#xe7bd;</i></a>'
           : "") +
         "</li>" +
         "<hr>";

@@ -23,6 +23,8 @@ var filePath = ["data/", host + "/govmap-system/sys/common/static/"];
 var getOrg = ["/location/{id}.json", "govmap/appHall/frontQueryById?id={id}"];
 // 公告信息
 var getNotice = ["/matter/hotList.json", "govmap/appRelatedNotice/list?id={id}"]
+// 获取地址
+var getPagePath = ["/matter/hotList.json", "govmap/appTenantPageVisit/increment?pagePath={pagePath}"]
 //网点列表
 var getOrgList = ["/location/orgList.json", "govmap/appOrg/frontPageList?pid=1593069623254011905"];
 //网点查询列表

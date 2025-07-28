@@ -517,6 +517,11 @@ function sconHTML(id) {
       layer.msg("未搜索到结果");
     },
   });
+  $.ajaxSetup({
+    headers: {
+      "X-Tenant-Id": siteKey,
+    },
+  });
   $.ajax({
     url: getAjaxUrl(getNotice, id),
     method: "get",
